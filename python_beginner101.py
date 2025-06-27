@@ -234,3 +234,164 @@ The data type of total cost is: <class 'float'>
 # # Printing out the total value and the current data type 
 # print("Total cost is:", total_cost)
 # print("The data type of total cost is", type(total_cost))
+
+""" STRINGS ARE ARRAYS CHALLENGE """
+"""
+✅ Challenge 1: First & Last Letter Extractor
+Goal: Ask the user for their name and print the first and last letter.
+
+🔹 Example:
+Input: "Chika"
+Output: "C" and "a"
+
+python
+Copy
+Edit
+# Your turn: Use indexing to extract first and last character"""
+
+# # Asking User For Their Name
+# name = input("What is your name? ")
+
+# # Extracting First and Last Character
+# first_character = name[0]
+# last_character = name[-1]
+
+# # Printing out the character
+# print(f"The first character is: {first_character} and The last character is: {last_character}")
+
+"""
+✅ Challenge 2: Tracking Code Splitter
+Goal: Given a tracking code like "ORD56983", extract and print:
+
+Prefix (first 3 characters)
+
+Numeric code (rest of the characters)
+
+🔹 Output:
+
+mathematica
+Copy
+Edit
+Order Prefix: ORD  
+Order Number: 56983
+"""
+
+# # Get the tracking code of this Order
+# Tracking_code = 'ORD56988'
+
+# # Spliting the charcter to get the order number
+# Order_Prefix = Tracking_code[:3]
+# Order_Number = Tracking_code[3:]
+
+# # Printing out the order values
+# print("Your Order Perfix:", Order_Prefix)
+# print("Your Order Number", Order_Number)
+
+"""
+✅ Challenge 3: String Reverser
+Goal: Ask the user to input a word, and print it backwards.
+
+🔹 Example:
+Input: "delivery"
+Output: "yreviled"
+
+python
+Copy code
+# Tip: Use slicing with [::-1]
+"""
+
+# # Asking users to input any word of their choice
+# word = input("Type in any word here: ")
+
+# # Setting the system to print it backwards
+# print_backwards = word[::-1]
+
+# # Printing out the values
+# print(print_backwards)
+
+"""
+✅ Challenge 4: Email Username Extractor
+Goal: Given an email address like "rider@quickpedal.com", extract only the username ("rider").
+
+🔹 Hint: Use .split("@") method.
+
+🔹 Output:
+
+python
+Copy code
+Email username is: rider
+python
+Copy code
+# Use string split() method here
+"""
+
+# # User email
+# email = input("What is your email? ").strip()
+
+# # checking if user includes '@' in emial before spliting the email
+# if "@" in email:
+#     email_username = email.split("@")[0]
+#     print(f"Email Username is:", email_username)
+# else:
+#   print("@ is missing in your email")
+
+"""
+✅ Challenge 5: Initials from Full Name
+Goal: Ask the user for their full name and print their initials in uppercase.
+
+🔹 Example:
+Input: "chika bright"
+Output: "Your initials are: CB"
+
+python
+Copy code
+# Use split() and indexing to grab the first letter of each name
+"""
+
+# Full Name input
+
+# Full_Name = input("What is your name? ").upper()
+
+# # Spliting the values
+# first_Initials = Full_Name.split()[0]
+# second_initials = Full_Name.split()[1]
+
+# # Getting initial character of each value
+# Your_Initials = first_Initials[0] + second_initials[0]
+# print(f"Your Initials are: {Your_Initials}")
+
+# x = "Hello, World!"
+# print(x[2:5])
+
+# print(10 < 9)
+# print(10 == 9)
+# print (10 < 9)
+"""
+PYTHON OPERATORS
+"""
+
+# DETERMINE THE FOLLOWING EXPRESSION
+
+# # Expression = (6 + 4) * 2 ** 3 - 10 / 2
+
+# a = 2 ** 3
+# b = 10 / 2
+# c = 6 + 4
+
+# e = a * c
+# f = e - b
+# print(f)
+
+"""PYTHON LIST"""
+
+# CREATING A FULL NAME LIST
+
+# names = ["bright", "chika", "okezie"]
+
+# # Checking if chika is in the above list
+
+# if "chika" in names:
+#     print("Yes", "chika is in the list of names")
+
+# else:
+#     print("We don'nt have chika in the list above")
