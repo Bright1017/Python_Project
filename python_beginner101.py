@@ -395,3 +395,138 @@ PYTHON OPERATORS
 
 # else:
 #     print("We don'nt have chika in the list above")
+
+"""
+✅ Challenge: Check Package Type
+You’re building a feature to check if a rider can carry a certain package.
+
+python
+Copy
+Edit
+allowed_packages = ["documents", "small box", "parcel", "groceries"]
+🎯 Your Task:
+Ask the user to input the type of package they want to send.
+
+Use an if statement and the in operator to check if the package type is allowed.
+
+If it's allowed, print:
+"✅ This package type is allowed for delivery."
+
+If not, print:
+"❌ Sorry, this package type is not allowed."
+"""
+# # Package types that are allowed on QuickPedal
+# allowed_packages = ["documents", "small box", "parcel", "groceries"]
+
+# # Asking users for their package type
+# package_type = input("What type of package are you delivering today? ")
+
+# # Checking the of package the customer is delivering 
+# if package_type in allowed_packages:
+#     print("This package type is allowd for delivery.")
+
+# else:
+#     print("Sorry, this package type is not allowed.")
+
+
+"""
+✅ Challenge: QuickPedal Delivery Booking Summary
+🎯 Goal: Simulate a basic delivery booking system that:
+
+Asks the customer for their full name
+
+Collects details of the item they want to deliver
+
+Confirms if the package is allowed
+
+Calculates the total cost
+
+Displays a summary with the user’s initials
+
+✍️ Challenge Requirements
+Step 1: Ask for user input
+Full name
+
+Package type
+
+Quantity
+
+Price per item
+
+Step 2: Check if package is allowed
+Allowed packages:
+
+python
+Copy
+Edit
+allowed_packages = ["documents", "electronics", "groceries", "books"]
+Step 3: If package is allowed:
+Show total cost
+
+Extract initials from name
+
+Print a neat delivery summary
+
+Step 4: If not allowed:
+Print “❌ This package type is not accepted on QuickPedal.”
+
+📌 Example Output
+plaintext
+Copy
+Edit
+Welcome to QuickPedal!
+Enter your full name: Chika Bright
+Enter package type: electronics
+Enter quantity: 2
+Enter price per item: 3500
+
+✅ Package type is accepted.
+Your delivery will cost ₦7000.
+Customer Initials: CB
+
+Thanks for choosing QuickPedal!
+💡 Hint:
+Use:
+
+.split() to get initials
+
+input() to collect user data
+
+float() and int() for calculations
+
+if and in to verify package type
+"""
+
+# Asking users for their name, type of package, quantity and price per item
+full_name = input("What is your full name? ").strip().title()
+package_type = input("Enter your package type: ").lower().strip()
+quantity = int(input("How many items are you delivering? "))
+price_per_item = int(input("What is the price per item? ₦"))
+confirm_payment = input("Have you paid? (yes/no): ").lower().strip()
+
+# Convert full name to initials
+split_name = full_name.split()
+initials = ''.join([name[0].upper() for name in split_name])
+
+# Set payment status
+is_paid = True if confirm_payment == "yes" else False
+
+# Allowed package types
+allowed_packages = ["documents", "electronics", "books", "food"]
+
+# Check if package type is allowed
+if package_type in allowed_packages:
+    total = quantity * price_per_item
+    print("\n--- ORDER SUMMARY ---")
+    print(f"Customer Initials: {initials}")
+    print(f"Package Type: {package_type}")
+    print(f"Total Quantity: {quantity}")
+    print(f"Total Cost: ₦{total:,}")  # Formats with comma, e.g. ₦10,000
+
+    if is_paid:
+        print("✅ Payment Status: Confirmed")
+    else:
+        print("❌ Payment Status: Pending")
+else:
+    print("\n❌ Sorry, this package type is not allowed on QuickPedal.")
+
