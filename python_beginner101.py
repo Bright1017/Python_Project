@@ -497,36 +497,52 @@ float() and int() for calculations
 if and in to verify package type
 """
 
-# Asking users for their name, type of package, quantity and price per item
-full_name = input("What is your full name? ").strip().title()
-package_type = input("Enter your package type: ").lower().strip()
-quantity = int(input("How many items are you delivering? "))
-price_per_item = int(input("What is the price per item? ₦"))
-confirm_payment = input("Have you paid? (yes/no): ").lower().strip()
+# # Asking users for their name, type of package, quantity and price per item
+# full_name = input("What is your full name? ").strip().title()
+# package_type = input("Enter your package type: ").lower().strip()
+# quantity = int(input("How many items are you delivering? "))
+# price_per_item = int(input("What is the price per item? ₦"))
+# confirm_payment = input("Have you paid? (yes/no): ").lower().strip()
 
-# Convert full name to initials
-split_name = full_name.split()
-initials = ''.join([name[0].upper() for name in split_name])
+# # Convert full name to initials
+# split_name = full_name.split()
+# initials = ''.join([name[0].upper() for name in split_name])
 
-# Set payment status
-is_paid = True if confirm_payment == "yes" else False
+# # Set payment status
+# is_paid = True if confirm_payment == "yes" else False
 
-# Allowed package types
-allowed_packages = ["documents", "electronics", "books", "food"]
+# # Allowed package types
+# allowed_packages = ["documents", "electronics", "books", "food"]
 
-# Check if package type is allowed
-if package_type in allowed_packages:
-    total = quantity * price_per_item
-    print("\n--- ORDER SUMMARY ---")
-    print(f"Customer Initials: {initials}")
-    print(f"Package Type: {package_type}")
-    print(f"Total Quantity: {quantity}")
-    print(f"Total Cost: ₦{total:,}")  # Formats with comma, e.g. ₦10,000
+# # Check if package type is allowed
+# if package_type in allowed_packages:
+#     total = quantity * price_per_item
+#     print("\n--- ORDER SUMMARY ---")
+#     print(f"Customer Initials: {initials}")
+#     print(f"Package Type: {package_type}")
+#     print(f"Total Quantity: {quantity}")
+#     print(f"Total Cost: ₦{total:,}")  # Formats with comma, e.g. ₦10,000
 
-    if is_paid:
-        print("✅ Payment Status: Confirmed")
-    else:
-        print("❌ Payment Status: Pending")
-else:
-    print("\n❌ Sorry, this package type is not allowed on QuickPedal.")
+#     if is_paid:
+#         print("✅ Payment Status: Confirmed")
+#     else:
+#         print("❌ Payment Status: Pending")
+# else:
+#     print("\n❌ Sorry, this package type is not allowed on QuickPedal.")
+"""
+Write a code that takes user input and check if a student have been offered admission.
+"""
+# admision_list = ['bright', 'chika', 'okezie', 'faith', 'amanda', 'ihuoma', 'trinty', 'ben', 'ada', 'ola']
+# student_name = input('What is your name? ')
+
+# for student in admision_list:
+#     if student == student_name:
+#         print("you have been offered an admission")
+#         break
+# else:
+#     print("you have not gained admission yet!")
+
+delivery_items = ["small box", "parcel", "shoe box", "fridge", "documents"]
+newlist = [x if "box" in x else "not a box" for x in delivery_items]
+print(newlist)
 
