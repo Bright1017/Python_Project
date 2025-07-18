@@ -541,8 +541,58 @@ Write a code that takes user input and check if a student have been offered admi
 #         break
 # else:
 #     print("you have not gained admission yet!")
+""""
+🚚 Challenge: Box Delivery Tagger
+You're creating a feature for QuickPedal that helps riders identify which packages are boxes and which are not.
 
-delivery_items = ["small box", "parcel", "shoe box", "fridge", "documents"]
-newlist = [x if "box" in x else "not a box" for x in delivery_items]
-print(newlist)
+🎯 Your Task:
+You have a list of delivery items.
 
+Use a list comprehension to check each item.
+
+If the item contains the word "box", tag it as "{item} ✅ Box".
+
+If it doesn’t, tag it as "{item} ❌ Not a box".
+
+Print the final list.
+"""""
+
+# items = ["shoe box", "documents", "parcel", "gift box", "water bottle"]
+
+# newlist = [f"{x}" if "box" in x else f"{x} Not a box" for x in items]
+# print(newlist)
+
+"""
+✅ Challenge: QuickPedal Delivery Filter & Tagger
+You're building a feature that prepares a summary of delivery items.
+You are given a list of packages with different names. Your goal is to:
+
+🎯 Your Task:
+Given: A list of delivery items (mixed types: allowed and not allowed).
+
+Use list comprehension to:
+
+Check if the item is allowed.
+
+If it's allowed and contains the word "box" → tag as: "✅ {item} (Box Approved)"
+
+If it's allowed but not a box → tag as: "✅ {item} (Approved)"
+
+If it's not allowed → tag as: "❌ {item} (Not Approved)"
+
+
+"""
+# Packages that are allowed on Quickpedal
+allowed_packages = ["documents", "small box", "electronics", "gift box", "books", "clothes", "parcel"]
+
+
+delivery_items = ["small box", "fridge", "gift box", "shoe", "books", "electronics", "water bottle", "parcel"]
+
+delivery_list = [
+    f"{item} (Box Approved)" if item in allowed_packages and "box" in item
+    else f"{item} (Approved)" if item in allowed_packages
+    else f"{item} (Not Approved)"
+    for item in delivery_items 
+]
+
+print(delivery_list)
