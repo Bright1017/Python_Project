@@ -582,17 +582,71 @@ If it's not allowed → tag as: "❌ {item} (Not Approved)"
 
 
 """
-# Packages that are allowed on Quickpedal
-allowed_packages = ["documents", "small box", "electronics", "gift box", "books", "clothes", "parcel"]
+# allowed_packages = ["documents", "small box", "electronics", "gift box", "books", "clothes", "parcel"]
 
 
-delivery_items = ["small box", "fridge", "gift box", "shoe", "books", "electronics", "water bottle", "parcel"]
+# delivery_items = ["small box", "fridge", "gift box", "shoe", "books", "electronics", "water bottle", "parcel"]
 
-delivery_list = [
-    f"{item} (Box Approved)" if item in allowed_packages and "box" in item
-    else f"{item} (Approved)" if item in allowed_packages
-    else f"{item} (Not Approved)"
-    for item in delivery_items 
+# delivery_list = [
+#     f"{item} (Box Approved)" if item in allowed_packages and "box" in item
+#     else f"{item} (Approved)" if item in allowed_packages
+#     else f"{item} (Not Approved)"
+#     for item in delivery_items 
+# ]
+
+# print(delivery_list)
+
+"""
+
+✅ Challenge: Delivery Approval & Category Tagging System
+You’re building a feature for QuickPedal to tag delivery items based on approval and type.
+
+📦 Data Provided:
+python
+Copy
+Edit
+allowed_boxes = ["small box", "gift box", "shoe box"]
+allowed_items = ["books", "electronics", "parcel", "documents"]
+restricted_items = ["gas cylinder", "explosives", "weapons"]
+
+incoming_items = [
+    "small box", "gift box", "water bottle", "gas cylinder",
+    "electronics", "documents", "banana", "shoe box", "explosives", "books"
 ]
 
-print(delivery_list)
+🎯 Your Task:
+Use list comprehension to generate a tagged_items list where:
+
+If the item is in restricted_items →
+🛑 "❌ {item} (Restricted - Not Allowed)"
+
+If the item is in allowed_boxes →
+📦 "✅ {item.upper()} (Approved Box)"
+
+If the item is in allowed_items →
+📄 "✅ {item} (Approved Item)"
+
+If the item is not found in any of the above →
+🟡 "⚠️ {item} (Unknown Item - Needs Review)"
+"""
+
+allowed_boxes = ["small box", "gift box", "shoe box"]
+allowed_items = ["books", "electronics", "parcel", "documents"]
+restricted_items = ["gas cylinder", "explosives", "weapons"]
+
+
+incoming_items = [
+    "small box", "gift box", "water bottle", "gas cylinder",
+    "electronics", "documents", "banana", "shoe box", "explosives", "books"
+]
+
+TaggingSystem = [
+    f"{item} (Restricted - Not Allowed)" if item in restricted_items
+    else f"{item} (Approved Box)" if item in allowed_boxes 
+    else f"{item.upper()} (Approved Item)" if item in allowed_items
+    else f"{item} (Unknown Item - Needs Review)"
+    for item in incoming_items
+]
+
+
+print(TaggingSystem)
