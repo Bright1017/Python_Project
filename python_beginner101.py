@@ -630,23 +630,102 @@ If the item is not found in any of the above →
 🟡 "⚠️ {item} (Unknown Item - Needs Review)"
 """
 
-allowed_boxes = ["small box", "gift box", "shoe box"]
-allowed_items = ["books", "electronics", "parcel", "documents"]
-restricted_items = ["gas cylinder", "explosives", "weapons"]
+# allowed_boxes = ["small box", "gift box", "shoe box"]
+# allowed_items = ["books", "electronics", "parcel", "documents"]
+# restricted_items = ["gas cylinder", "explosives", "weapons"]
 
 
-incoming_items = [
-    "small box", "gift box", "water bottle", "gas cylinder",
-    "electronics", "documents", "banana", "shoe box", "explosives", "books"
-]
+# incoming_items = [
+#     "small box", "gift box", "water bottle", "gas cylinder",
+#     "electronics", "documents", "banana", "shoe box", "explosives", "books"
+# ]
 
-TaggingSystem = [
-    f"{item} (Restricted - Not Allowed)" if item in restricted_items
-    else f"{item} (Approved Box)" if item in allowed_boxes 
-    else f"{item.upper()} (Approved Item)" if item in allowed_items
-    else f"{item} (Unknown Item - Needs Review)"
-    for item in incoming_items
-]
+# TaggingSystem = [
+#     f"{item} (Restricted - Not Allowed)" if item in restricted_items
+#     else f"{item} (Approved Box)" if item in allowed_boxes 
+#     else f"{item.upper()} (Approved Item)" if item in allowed_items
+#     else f"{item} (Unknown Item - Needs Review)"
+#     for item in incoming_items
+# ]
+
+# print(TaggingSystem)
+# def myfunc(n):
+#     return abs(n-50)
+
+# names = ("bright", "chika", "amanda")
+# y = list(names)
+# y[1] = 6
+# names = tuple(y)
+# print(names)
+
+"""
+🚀 QuickPedal Riders’ Challenge
+You are managing a list of riders for QuickPedal, and you need to perform several operations using Python lists.
+
+Start with this list of riders:
+
+python
+Copy
+Edit
+riders = ["John", "Chika", "Mary", "Ahmed", "Grace"]
+Tasks:
+
+Add two new riders: "Paul" and "Linda".
+
+Remove "Ahmed" from the list.
+
+Insert "Sandra" in the second position.
+
+Replace "Mary" with "Mariam".
+
+Get the total number of riders.
+
+Sort the list alphabetically.
+
+Reverse the sorted list so it’s in descending order.
+
+Slice the list to get only the first 3 riders.
+
+Check if "Chika" is in the list and print a message accordingly.
+
+Create a new list that contains riders whose names are longer than 5 letters.
+
+💡 Bonus Challenge:
+Turn your final list into a comma-separated string and print it like this:
+
+arduino
+Copy
+Edit
+"John, Chika, Grace, Mariam, ..."
+"""
+
+# LIST OF RIDERS IN QUICKPEDAL
+
+riders = ["John", "Chika", "Mary", "Ahmed", "Grace"]
+
+# ADDING EXTRA RIDER NAMES TO QUICKPEDAL
+
+riders.append("Paul")
+riders.append("Linda")
+riders.remove("Ahmed")
+riders.insert(2, "Sandra")
+riders[3] = "Mariam"
+print("Total riders:", len(riders))
 
 
-print(TaggingSystem)
+riders.sort()
+print("Sorted:", riders)
+riders.reverse()
+print("Reserved Sorted:", riders)
+# riders[riders.index("Mary")] = "Mariam"
+
+print("First 3 Names:", riders[:3])
+
+if "Chika" in riders:
+    print("Chika is a Rider in QuickPedal")
+else:
+    print("Name does not exist in QuickPedal")
+
+
+Long_Names = [name for name in riders if len(name) > 5]
+print("Riders with names longer than five:",Long_Names)
