@@ -701,31 +701,31 @@ Edit
 
 # LIST OF RIDERS IN QUICKPEDAL
 
-riders = ["John", "Chika", "Mary", "Ahmed", "Grace"]
+# riders = ["John", "Chika", "Mary", "Ahmed", "Grace"]
 
-# ADDING EXTRA RIDER NAMES TO QUICKPEDAL
+# # ADDING EXTRA RIDER NAMES TO QUICKPEDAL
 
-riders.append("Paul")
-riders.append("Linda")
-riders.remove("Ahmed")
-riders.insert(2, "Sandra")
-riders[3] = "Mariam"
-print("Total riders:", len(riders))
-
-
-riders.sort()
-print("Sorted:", riders)
-riders.reverse()
-print("Reserved Sorted:", riders)
-# riders[riders.index("Mary")] = "Mariam"
-
-print("First 3 Names:", riders[:3])
-
-if "Chika" in riders:
-    print("Chika is a Rider in QuickPedal")
-else:
-    print("Name does not exist in QuickPedal")
+# riders.append("Paul")
+# riders.append("Linda")
+# riders.remove("Ahmed")
+# riders.insert(2, "Sandra")
+# riders[3] = "Mariam"
+# print("Total riders:", len(riders))
 
 
-Long_Names = [name for name in riders if len(name) > 5]
-print("Riders with names longer than five:",Long_Names)
+# riders.sort()
+# print("Sorted:", riders)
+# riders.reverse()
+# print("Reserved Sorted:", riders)
+# # riders[riders.index("Mary")] = "Mariam"
+
+# print("First 3 Names:", riders[:3])
+
+# if "Chika" in riders:
+#     print("Chika is a Rider in QuickPedal")
+# else:
+#     print("Name does not exist in QuickPedal")
+
+
+# Long_Names = [name for name in riders if len(name) > 5]
+# print("Riders with names longer than five:",Long_Names)
