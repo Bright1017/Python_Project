@@ -93,3 +93,93 @@ Print the long_names list.
 
 
 # DICTIONARIES IN PYTHON
+
+# config = {
+#     "color": "green",
+#     "width": 42,
+#     "height": 100,
+#     "font": "Bold"
+# }
+
+# x = config.keys()
+# print(x)
+
+riders = {
+
+    "Roo1":{"name":"chika","deliveries": 45,"wallet": 5000},
+    "Roo2":{"name":"mary","deliveries": 30,"wallet": 2000},
+    "Roo3":{"name":"ahmed","deliveries": 55,"wallet": 4000}
+}
+
+x = riders.get("Roo1")
+print(x)
+
+# # Increased chika's delivery by 5
+# riders["Roo1"]["deliveries"] += 5
+
+# # increased mary's wallet balance by 1000
+# riders["Roo2"]["wallet"] += 1000
+
+# # Added a new rider in the dictonary 
+# riders["Roo4"] = {"name":"bright","deliveries": 10,"wallet": 7000}
+
+# # deleting Ahmed from the rider's dictionary
+# del riders["Roo3"]
+
+# # Printing out all rider's name from the dictionary
+# for rider_id, details in riders.items():
+#     print(details["name"])
+
+# for rider_id, details in riders.items():
+#      print(f"{details['name']} - Wallet Balance: ₦{details['wallet']}")
+
+# # Checking if "Roo5" is avialable in the dictionary
+# if "Roo5" in riders:
+#     print("Yes, we have Roo5 in the rider's dictionary")
+# else:
+#     print("We don't have Roo5 in the dictionary")
+
+# top_rider = max(riders.values(), key=lambda x: x["deliveries"])
+# print(f"Top Performer: {top_rider['name']} with {top_rider['deliveries']} deliveries")
+
+# print(riders)
+
+"""
+📌 QuickPedal Dictionary Task
+
+You’re managing QuickPedal’s riders database. Complete the following using Python dictionaries:
+
+riders = {
+    "Roo1": {"name": "Chika", "deliveries": 45, "wallet": 5000},
+    "Roo2": {"name": "Mary", "deliveries": 30, "wallet": 2000},
+    "Roo3": {"name": "Ahmed", "deliveries": 55, "wallet": 4000},
+    "Roo4": {"name": "Bright", "deliveries": 10, "wallet": 7000},
+}
+
+✅ Your Tasks:
+
+Add a new rider → Roo5: name = Grace, deliveries = 20, wallet = 2500.
+
+Update wallet → Add ₦2000 to Mary’s wallet.
+
+Remove a rider → Bright leaves QuickPedal, remove Roo4.
+
+Total Deliveries → Calculate how many deliveries all riders made combined.
+
+Find Richest Rider → Print rider with the highest wallet balance.
+
+Export Summary → Loop through and print in this format:
+"""
+
+
+riders = {
+    "Roo1": {"name": "Chika", "deliveries": 45, "wallet": 5000},
+    "Roo2": {"name": "Mary", "deliveries": 30, "wallet": 2000},
+    "Roo3": {"name": "Ahmed", "deliveries": 55, "wallet": 4000},
+    "Roo4": {"name": "Bright", "deliveries": 10, "wallet": 7000},
+}
+
+# Added a new rider in the dictionary
+riders["Roo5"] = {"name": "Grace", "deliveries": 20, "wallet": 2500}
+riders["Roo2"]["wallet"] += 2000
+del riders["Roo3"]
