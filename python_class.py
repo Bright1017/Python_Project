@@ -104,15 +104,15 @@ Print the long_names list.
 # x = config.keys()
 # print(x)
 
-riders = {
+# riders = {
 
-    "Roo1":{"name":"chika","deliveries": 45,"wallet": 5000},
-    "Roo2":{"name":"mary","deliveries": 30,"wallet": 2000},
-    "Roo3":{"name":"ahmed","deliveries": 55,"wallet": 4000}
-}
+#     "Roo1":{"name":"chika","deliveries": 45,"wallet": 5000},
+#     "Roo2":{"name":"mary","deliveries": 30,"wallet": 2000},
+#     "Roo3":{"name":"ahmed","deliveries": 55,"wallet": 4000}
+# }
 
-x = riders.get("Roo1")
-print(x)
+# x = riders.get("Roo1")
+# print(x)
 
 # # Increased chika's delivery by 5
 # riders["Roo1"]["deliveries"] += 5
@@ -172,14 +172,21 @@ Export Summary → Loop through and print in this format:
 """
 
 
-riders = {
-    "Roo1": {"name": "Chika", "deliveries": 45, "wallet": 5000},
-    "Roo2": {"name": "Mary", "deliveries": 30, "wallet": 2000},
-    "Roo3": {"name": "Ahmed", "deliveries": 55, "wallet": 4000},
-    "Roo4": {"name": "Bright", "deliveries": 10, "wallet": 7000},
-}
+# riders = {
+#     "Roo1": {"name": "Chika", "deliveries": 45, "wallet": 5000},
+#     "Roo2": {"name": "Mary", "deliveries": 30, "wallet": 2000},
+#     "Roo3": {"name": "Ahmed", "deliveries": 55, "wallet": 4000},
+#     "Roo4": {"name": "Bright", "deliveries": 10, "wallet": 7000},
+# }
 
-# Added a new rider in the dictionary
-riders["Roo5"] = {"name": "Grace", "deliveries": 20, "wallet": 2500}
-riders["Roo2"]["wallet"] += 2000
-del riders["Roo3"]
+# # Added a new rider in the dictionary
+# riders["Roo5"] = {"name": "Grace", "deliveries": 20, "wallet": 2500}
+# riders["Roo2"]["wallet"] += 2000
+# del riders["Roo3"]
+
+# number1 = 10
+# number2 = 5
+
+# x = number1 + number2
+# print(f"Addtion of {number1} and {number2} is {x}")
+
